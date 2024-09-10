@@ -32,7 +32,7 @@
     <h1>10 Useful SLURM Cluster Codes</h1>
     <ul>
         <li>
-            <h2>Submit a Job</h2>
+            <h2>Submit a Job, the job_script.sh contains commands and instructions to run a code in cluster</h2>
             <pre>
 sbatch job_script.sh
             </pre>
@@ -52,7 +52,7 @@ scancel job_id
         <li>
             <h2>View Job Output</h2>
             <pre>
-cat job_id.out
+vi job_id.out
             </pre>
         </li>
         <li>
@@ -62,7 +62,7 @@ srun -i --pty bash
             </pre>
         </li>
         <li>
-            <h2>Check Node Information</h2>
+            <h2>Check Node Information, this shows available nodes in a cluster</h2>
             <pre>
 sinfo
             </pre>
@@ -79,18 +79,6 @@ sinfo -p partition_name
 squeue -p partition_name
             </pre>
         </li>
-        <li>
-            <h2>Create a New Partition</h2>
-            <pre>
-scontrol create partition name=new_partition nodes=1:1,2:1 state=enabled
-            </pre>
-        </li>
-        <li>
-            <h2>Modify a Partition</h2>
-            <pre>
-scontrol modify partition name=new_partition state=disabled
-            </pre>
-        </li>
-    </ul>
+               </ul>
 </body>
 </html>
