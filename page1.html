@@ -1,4 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Useful SLURM Cluster Codes</title>
+    <style>
+        body {
+            background-color: #f0ffff; /* Light Cyan */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #008080; /* Teal */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
 <body>
-<h1 id='page1'>Graph Neural Networks </h1>
-
+    <h1>10 Useful SLURM Cluster Codes</h1>
+    <ul>
+        <li>
+            <h2>Submit a Job</h2>
+            <pre>
+sbatch job_script.sh
+            </pre>
+        </li>
+        <li>
+            <h2>Check Job Status</h2>
+            <pre>
+squeue -u your_username
+            </pre>
+        </li>
+        <li>
+            <h2>Cancel a Job</h2>
+            <pre>
+scancel job_id
+            </pre>
+        </li>
+        <li>
+            <h2>View Job Output</h2>
+            <pre>
+cat job_id.out
+            </pre>
+        </li>
+        <li>
+            <h2>Request Interactive Session</h2>
+            <pre>
+srun -i --pty bash
+            </pre>
+        </li>
+        <li>
+            <h2>Check Node Information</h2>
+            <pre>
+sinfo
+            </pre>
+        </li>
+        <li>
+            <h2>Check Partition Information</h2>
+            <pre>
+sinfo -p partition_name
+            </pre>
+        </li>
+        <li>
+            <h2>Check Queue Information</h2>
+            <pre>
+squeue -p partition_name
+            </pre>
+        </li>
+        <li>
+            <h2>Create a New Partition</h2>
+            <pre>
+scontrol create partition name=new_partition nodes=1:1,2:1 state=enabled
+            </pre>
+        </li>
+        <li>
+            <h2>Modify a Partition</h2>
+            <pre>
+scontrol modify partition name=new_partition state=disabled
+            </pre>
+        </li>
+    </ul>
 </body>
+</html>
