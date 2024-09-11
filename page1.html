@@ -8,7 +8,7 @@
         body {
             background-color: #f0ffff; /* Light Cyan */
             font-family: Arial, sans-serif;
-            text-align: center;
+            text-align: left;
         }
         h1 {
             color: #008080; /* Teal */
@@ -29,14 +29,32 @@
     </style>
 </head>
 <body>
-    <h1>10 Useful SLURM Cluster Codes</h1>
+    <h1> Useful SLURM Cluster Codes</h1>
     <ul>
         <li>
-            <h2>Submit a Job, the job_script.sh contains commands and instructions to run a code in cluster</h2>
+            <h5>Submit a Job, the job_script.sh contains commands and instructions to run a code in cluster</h5>
             <pre>
 sbatch job_script.sh
             </pre>
+	    <h4 style="text-align:left">inside the job_script.sh</h4>
+	    <p style="text-align:left">
+	    #!/bin/sh <br>
+#SBATCH --job-name=training5  <br>
+#SBATCH --N 1 <br>
+#SBATCH --n 14 #number of cores <br>
+#SBATCH --gres=gpu:1   ## Run on 1 GPU <br>
+#SBATCH --output new.out <br>
+#SBATCH --error report_error.err <br>
+#SBATCH --p v100-16gb #partition name
+<br><br>
+
+module load python3/anaconda/2021.11 <br>
+module load cuda/11.1 <br>
+conda activate newALIGNN #load local environment <br>
+python3 train_folder.py <br>
+    </p>
         </li>
+
         <li>
             <h2>Check Job Status</h2>
             <pre>
