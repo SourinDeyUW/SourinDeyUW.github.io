@@ -35,9 +35,23 @@
 <p>Then we can do the following by first making some dummy python files:</p>
 <pre>for i in {1..1000};do touch campaign_${i}.py;done</pre>
 <p> Now, you will see 10 py files are created. We can add some codes as well like:</p>
-<pre>for i in {1..1000}; do   touch campaign_${i}.py;   echo "import sys;arg1=sys.argv[1];print(arg1)" >> campaign_${i}.py; done </pre>
+<pre>for i in {1..1000}; do   touch campaign_${i}.py;   echo "import sys;arg1=sys.argv[1];print('I received: ',arg1)" >> campaign_${i}.py; done </pre>
 <p> Ok, now each of our python files are taking some arguments through command window. Now, we want to pass some value to the python files which it will print and save output in the output_${i}.txt files where ${i} is from 1 to 1000 , etc. </p>
 
-
+<pre>for i in {1..10}; do python campaign_${i}.py <b>$i</b> >> output_${i}.txt;done</pre>
+<pre> for i in {1..10};do cat output_${i}.txt;done</pre>
+<p>You will see the below outputs:</p>
+<pre>
+I received:  1
+I received:  2
+I received:  3
+I received:  4
+I received:  5
+I received:  6
+I received:  7
+I received:  8
+I received:  9
+I received:  10
+</pre>
 </body>
 </html>
