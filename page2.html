@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Multiple Python Files Efficiently</title>
+    <style>
+        /* Add some basic styling for better readability */
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Running Multiple Python Files Efficiently</h1>
+    <p>
+      1)  One Python file can be used for multiple jobs. We utilize High-Performance Computing (HPC) for complex calculations that wouldn't be feasible on a regular laptop or desktop. <br>
+        Let's explore a method to streamline this process. Imagine you want to execute 1,000 Python files simultaneously. Do you need to submit a separate batch file for each one?
+    </p>
+    <p>The answer is no! We can achieve this efficiently using a simple `for` loop in a Linux command.</p>
+    <pre>
+        for i in {1..1000}; do python pyfile.py; done
+    </pre>
+    <p>This command iterates through a sequence from 1 to 1,000, executing the script `pyfile.py` with Python for each iteration.</p>
+
+<p>2) Well, let’s store the output of each jobs in some files for analysis. To do that, let’s modify the code like below:</p>
+<pre>for i in {1..1000}; do python pyfile.py >> output_{i}.txt; done </pre>
+</p>This will make 1000 output file that will contain any results of each of those 1000 python file experiments. As you can see, the txt files will be created as output_1.txt, output_2.txt,.., output_1000.txt. </p>
+
+
+<p> 3) It’s time to add more complexities in running the jobs. It might be the case that we have 1000 different python files and we want to run them at once. In this case, you should be naming the files that follows a common suffix or prefix such as: campagin_1.py , campaign_2.py,...,campaign_3.py. </p>
+
+<p>Then we can do the following by first making some dummy python files:</p>
+<pre>for i in {1..1000};do touch campaign_${i}.py;done</pre>
+<p> Now, you will see 10 py files are created. We can add some codes as well like:</p>
+<pre>for i in {1..1000}; do   touch campaign_${i}.py;   echo "import sys;arg1=sys.argv[1];print(arg1)" >> campaign_${i}.py; done </pre>
+<p> Ok, now each of our python files are taking some arguments through command window. Now, we want to pass some value to the python files which it will print and save output in the output_${i}.txt files where ${i} is from 1 to 1000 , etc. </p>
+
+
+</body>
+</html>
