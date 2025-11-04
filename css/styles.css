@@ -24,7 +24,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #bd5d38;
+  --primary: #2c3e50;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -61,9 +61,9 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.6;
   color: #212529;
   text-align: left;
   background-color: #fff;
@@ -368,7 +368,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-  font-size: 6rem;
+  font-size: 5rem;
 }
 
 h2, .h2 {
@@ -10079,7 +10079,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: #2c3e50;
 }
 
 .dev-icons {
@@ -10091,8 +10091,8 @@ section.resume-section {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
   max-width: 75rem;
 }
 section.resume-section .resume-section-content {
@@ -10108,7 +10108,7 @@ section.resume-section .resume-section-content {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 }
