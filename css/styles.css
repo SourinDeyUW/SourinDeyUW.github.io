@@ -10108,3 +10108,34 @@ section.resume-section .resume-section-content {
     padding-bottom: 6rem;
   }
 }
+
+/* Improved text colors for professional look */
+body {
+  color: #1a1a1a; /* Darker text for better contrast */
+}
+
+a {
+  color: #2c3e50; /* Use primary color for links */
+}
+
+a:hover {
+  color: #1f2d3d; /* Darker shade for hover */
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #1a1a1a; /* Consistent dark headings */
+}
+
+/* Publications styling */
+#awards ul li {
+  color: #333; /* Slightly lighter than body for variety */
+}
+
+#awards ul li em {
+  color: #555; /* Muted color for journal/year */
+}
+
+#awards ul li strong {
+  color: #1a1a1a; /* Dark titles */
+}
