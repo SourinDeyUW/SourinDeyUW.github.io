@@ -63,6 +63,86 @@
                 background-color: #fff;
                 color: var(--ink);
             }
+            /* Quick facts panel */
+            .facts {
+                max-width: 980px;
+                margin: 2.75rem auto 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.1rem;
+                text-align: left;
+            }
+            @media (max-width: 720px) { .facts { grid-template-columns: 1fr; } }
+            .fact-card {
+                background: rgba(255, 255, 255, 0.07);
+                border: 1px solid rgba(255, 255, 255, 0.14);
+                border-radius: 14px;
+                padding: 1.4rem 1.5rem;
+                backdrop-filter: blur(4px);
+            }
+            .fact-card h3 {
+                font-family: "Saira Extra Condensed", sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                font-size: 1.25rem;
+                margin: 0 0 1rem;
+                color: #8fb8d6;
+                display: flex;
+                align-items: center;
+                gap: 0.6rem;
+            }
+            .fact-list {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                font-family: "Muli", sans-serif;
+            }
+            .fact-list li {
+                position: relative;
+                padding-left: 1.1rem;
+                margin-bottom: 0.85rem;
+                font-size: 0.95rem;
+                line-height: 1.35;
+                color: #eef2f6;
+            }
+            .fact-list li:last-child { margin-bottom: 0; }
+            .fact-list li::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0.5rem;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background: #8fb8d6;
+            }
+            .fact-list li strong { font-weight: 800; }
+            .fact-list li .meta {
+                display: block;
+                font-size: 0.8rem;
+                opacity: 0.75;
+                margin-top: 0.1rem;
+            }
+            .fact-card.span-2 { grid-column: 1 / -1; }
+            .fact-inline {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.6rem 2rem;
+                font-family: "Muli", sans-serif;
+                font-size: 0.95rem;
+                color: #eef2f6;
+            }
+            .fact-inline .pill {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                background: rgba(255,255,255,0.08);
+                border: 1px solid rgba(255,255,255,0.14);
+                border-radius: 50rem;
+                padding: 0.4rem 1rem;
+            }
+            .fact-inline .pill i { color: #8fb8d6; }
             /* Gallery — masonry via CSS columns */
             .gallery {
                 column-count: 3;
@@ -200,6 +280,49 @@
             <h1>Beyond <span class="accent">Research</span></h1>
             <p>A few moments from the road, the mountains, and the people I love — life outside the lab as a PhD student exploring the U.S. and home in Bangladesh.</p>
             <a class="home-link" href="index.html"><i class="fas fa-arrow-left"></i>&nbsp; Back to résumé</a>
+
+            <div class="facts">
+                <div class="fact-card span-2">
+                    <div class="fact-inline">
+                        <span class="pill"><i class="fas fa-ruler-vertical"></i> Height · 5&prime;4&Prime; (5 feet 4 inches)</span>
+                        <span class="pill"><i class="fas fa-map-marker-alt"></i> Columbia, South Carolina</span>
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <ul class="fact-list">
+                        <li>
+                            <strong>PhD · Computer Science</strong>
+                            <span class="meta">University of South Carolina · 2021&ndash;present</span>
+                        </li>
+                        <li>
+                            <strong>MS · Computer Science</strong>
+                            <span class="meta">University of Wyoming · 2019&ndash;2021</span>
+                        </li>
+                        <li>
+                            <strong>BSc · Electrical &amp; Electronic Engineering</strong>
+                            <span class="meta">KUET · 2014&ndash;2018</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="fact-card">
+                    <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                    <ul class="fact-list">
+                        <li>
+                            <strong>Data Science Intern</strong>
+                            <span class="meta">The Dow Chemical Company · Summer 2026</span>
+                        </li>
+                        <li>
+                            <strong>Data Science Intern</strong>
+                            <span class="meta">Hexagon Manufacturing Intelligence (Cadence Design Systems) · Summer 2025</span>
+                        </li>
+                        <li>
+                            <strong>Data Science Intern</strong>
+                            <span class="meta">The Dow Chemical Company · Summer 2024</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </header>
 
         <div class="gallery-intro">
