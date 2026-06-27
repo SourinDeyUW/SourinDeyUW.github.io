@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Personal photo gallery of Sourin Dey — travels, family and life beyond research." />
+        <meta name="author" content="Sourin Dey" />
+        <title>Sourin Dey · Personal</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            :root {
+                --ink: #2c3e50;
+            }
+            body {
+                background-color: #f4f5f7;
+            }
+            /* Hero banner */
+            .personal-hero {
+                background: linear-gradient(135deg, #2c3e50 0%, #34495e 60%, #4a6278 100%);
+                color: #fff;
+                padding: 7rem 1.5rem 4rem;
+                text-align: center;
+            }
+            .personal-hero h1 {
+                font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                font-weight: 700;
+                font-size: clamp(2.75rem, 7vw, 5rem);
+                letter-spacing: 0.04em;
+                line-height: 1;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            .personal-hero h1 .accent { color: #8fb8d6; }
+            .personal-hero p {
+                font-family: "Muli", sans-serif;
+                max-width: 640px;
+                margin: 1.25rem auto 0;
+                font-size: 1.05rem;
+                opacity: 0.9;
+            }
+            .personal-hero .home-link {
+                display: inline-block;
+                margin-top: 1.75rem;
+                color: #fff;
+                border: 1px solid rgba(255,255,255,0.6);
+                border-radius: 50rem;
+                padding: 0.45rem 1.4rem;
+                font-family: "Saira Extra Condensed", sans-serif;
+                font-size: 1.1rem;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: background-color 0.2s ease, color 0.2s ease;
+            }
+            .personal-hero .home-link:hover {
+                background-color: #fff;
+                color: var(--ink);
+            }
+            /* Gallery — masonry via CSS columns */
+            .gallery {
+                column-count: 3;
+                column-gap: 1.1rem;
+                max-width: 1180px;
+                margin: 0 auto;
+                padding: 3rem 1.5rem 4rem;
+            }
+            @media (max-width: 900px) { .gallery { column-count: 2; } }
+            @media (max-width: 560px) { .gallery { column-count: 1; } }
+
+            .photo-card {
+                position: relative;
+                break-inside: avoid;
+                margin-bottom: 1.1rem;
+                border-radius: 14px;
+                overflow: hidden;
+                box-shadow: 0 6px 18px rgba(20, 30, 45, 0.12);
+                cursor: pointer;
+                background: #fff;
+            }
+            .photo-card img {
+                display: block;
+                width: 100%;
+                height: auto;
+                transition: transform 0.55s ease;
+            }
+            .photo-card:hover img { transform: scale(1.06); }
+            .photo-card .caption {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 2.2rem 1rem 0.9rem;
+                color: #fff;
+                font-family: "Muli", sans-serif;
+                font-weight: 800;
+                font-size: 0.95rem;
+                letter-spacing: 0.01em;
+                background: linear-gradient(to top, rgba(15, 22, 33, 0.85), rgba(15, 22, 33, 0));
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+            .photo-card:hover .caption { opacity: 1; transform: translateY(0); }
+            .photo-card .caption small {
+                display: block;
+                font-weight: 400;
+                font-size: 0.78rem;
+                opacity: 0.85;
+            }
+            /* Section heading */
+            .gallery-intro {
+                text-align: center;
+                padding: 3rem 1.5rem 0;
+            }
+            .gallery-intro h2 {
+                font-family: "Saira Extra Condensed", sans-serif;
+                font-weight: 700;
+                color: var(--ink);
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                font-size: 2rem;
+                margin: 0;
+            }
+            .gallery-intro span {
+                display: block;
+                width: 56px;
+                height: 4px;
+                background: #2c3e50;
+                margin: 0.9rem auto 0;
+                border-radius: 2px;
+            }
+            /* Lightbox */
+            .lightbox {
+                position: fixed;
+                inset: 0;
+                background: rgba(12, 18, 27, 0.94);
+                display: none;
+                align-items: center;
+                justify-content: center;
+                z-index: 1080;
+                padding: 1.5rem;
+            }
+            .lightbox.open { display: flex; }
+            .lightbox img {
+                max-width: 92vw;
+                max-height: 82vh;
+                border-radius: 8px;
+                box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+            }
+            .lightbox .lb-caption {
+                position: absolute;
+                bottom: 1.6rem;
+                left: 0;
+                right: 0;
+                text-align: center;
+                color: #fff;
+                font-family: "Muli", sans-serif;
+                font-size: 1rem;
+            }
+            .lightbox .lb-close,
+            .lightbox .lb-nav {
+                position: absolute;
+                color: #fff;
+                background: rgba(255,255,255,0.12);
+                border: none;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                font-size: 1.4rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.2s ease;
+            }
+            .lightbox .lb-close:hover,
+            .lightbox .lb-nav:hover { background: rgba(255,255,255,0.28); }
+            .lightbox .lb-close { top: 1.2rem; right: 1.2rem; }
+            .lightbox .lb-nav.prev { left: 1.2rem; top: 50%; transform: translateY(-50%); }
+            .lightbox .lb-nav.next { right: 1.2rem; top: 50%; transform: translateY(-50%); }
+            footer.personal-footer {
+                text-align: center;
+                padding: 2.5rem 1rem 3rem;
+                color: #6c757d;
+                font-family: "Muli", sans-serif;
+                font-size: 0.9rem;
+            }
+            footer.personal-footer a { color: var(--ink); }
+        </style>
+    </head>
+    <body id="page-top">
+        <header class="personal-hero">
+            <h1>Beyond <span class="accent">Research</span></h1>
+            <p>A few moments from the road, the mountains, and the people I love — life outside the lab as a PhD student exploring the U.S. and home in Bangladesh.</p>
+            <a class="home-link" href="index.html"><i class="fas fa-arrow-left"></i>&nbsp; Back to résumé</a>
+        </header>
+
+        <div class="gallery-intro">
+            <h2>Photo Gallery</h2>
+            <span></span>
+        </div>
+
+        <main class="gallery" id="gallery">
+            <figure class="photo-card" data-caption="Times Square, New York City — exploring the city with family.">
+                <img src="personal_portfolio/01-times-square.jpg" alt="Family in Times Square, New York City" loading="lazy" />
+                <figcaption class="caption">Times Square, NYC <small>City lights with family</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="Home with family in Dhaka, Bangladesh.">
+                <img src="personal_portfolio/02-family-dhaka.jpg" alt="Family portrait outside home in Dhaka" loading="lazy" />
+                <figcaption class="caption">Home, Dhaka <small>With family in Bangladesh</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="Sunset over the Blue Ridge Mountains, North Carolina.">
+                <img src="personal_portfolio/03-blue-ridge-sunset.jpg" alt="Standing on a hilltop at sunset" loading="lazy" />
+                <figcaption class="caption">Blue Ridge Sunset <small>North Carolina</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="Mount Mitchell State Park — the highest peak east of the Mississippi.">
+                <img src="personal_portfolio/04-mount-mitchell.jpg" alt="At the Mount Mitchell State Park sign" loading="lazy" />
+                <figcaption class="caption">Mount Mitchell <small>State Park, North Carolina</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="A snowy winter morning by the reservoir in Colorado.">
+                <img src="personal_portfolio/05-colorado-snow.jpg" alt="Snowy reservoir landscape in Colorado" loading="lazy" />
+                <figcaption class="caption">Colorado Winter <small>Snow by the reservoir</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="Downtown Charlotte, North Carolina.">
+                <img src="personal_portfolio/06-charlotte.jpg" alt="Downtown Charlotte cityscape" loading="lazy" />
+                <figcaption class="caption">Downtown Charlotte <small>North Carolina</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="A festive day at the Mandir.">
+                <img src="personal_portfolio/07-mandir.jpg" alt="In traditional attire at a carved temple" loading="lazy" />
+                <figcaption class="caption">Festival Day <small>At the Mandir</small></figcaption>
+            </figure>
+            <figure class="photo-card" data-caption="Internship days at Dow.">
+                <img src="personal_portfolio/08-dow-internship.jpg" alt="At the Dow office during internship" loading="lazy" />
+                <figcaption class="caption">Internship at Dow <small>Data Science, Summer 2024</small></figcaption>
+            </figure>
+        </main>
+
+        <footer class="personal-footer">
+            &copy; <span id="year"></span> Sourin Dey ·
+            <a href="index.html">Résumé</a> ·
+            <a href="https://www.flickr.com/photos/191915104@N02/" target="_blank" rel="noopener noreferrer">More on Flickr</a>
+        </footer>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+            <button class="lb-nav prev" id="lbPrev" aria-label="Previous">&#10094;</button>
+            <img id="lbImg" src="" alt="" />
+            <button class="lb-nav next" id="lbNext" aria-label="Next">&#10095;</button>
+            <div class="lb-caption" id="lbCaption"></div>
+        </div>
+
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            (function () {
+                const cards = Array.from(document.querySelectorAll('.photo-card'));
+                const lb = document.getElementById('lightbox');
+                const lbImg = document.getElementById('lbImg');
+                const lbCap = document.getElementById('lbCaption');
+                let current = 0;
+
+                function show(i) {
+                    current = (i + cards.length) % cards.length;
+                    const card = cards[current];
+                    lbImg.src = card.querySelector('img').src;
+                    lbImg.alt = card.querySelector('img').alt;
+                    lbCap.textContent = card.getAttribute('data-caption') || '';
+                }
+                function open(i) { show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+                function close() { lb.classList.remove('open'); document.body.style.overflow = ''; }
+
+                cards.forEach((c, i) => c.addEventListener('click', () => open(i)));
+                document.getElementById('lbClose').addEventListener('click', close);
+                document.getElementById('lbNext').addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+                document.getElementById('lbPrev').addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+                lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+                document.addEventListener('keydown', (e) => {
+                    if (!lb.classList.contains('open')) return;
+                    if (e.key === 'Escape') close();
+                    else if (e.key === 'ArrowRight') show(current + 1);
+                    else if (e.key === 'ArrowLeft') show(current - 1);
+                });
+            })();
+        </script>
+    </body>
+</html>
