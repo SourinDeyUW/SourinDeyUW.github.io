@@ -6,7 +6,7 @@ compatibility_date = "2025-01-01"
 # Replace the id below with the one printed by:
 #   wrangler kv namespace create VISITS
 kv_namespaces = [
-  { binding = "VISITS", id = "REPLACE_WITH_KV_ID" }
+  { binding = "VISITS", id = "5f97fd0546304238b78958bf3ee1621e" }
 ]
 
 # ADMIN_KEY (used to read /logs) is a SECRET, not stored here.
