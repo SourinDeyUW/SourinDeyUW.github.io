@@ -1,0 +1,13 @@
+name = "ip-logger"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+# The KV namespace that stores visits.
+# Replace the id below with the one printed by:
+#   wrangler kv namespace create VISITS
+kv_namespaces = [
+  { binding = "VISITS", id = "REPLACE_WITH_KV_ID" }
+]
+
+# ADMIN_KEY (used to read /logs) is a SECRET, not stored here.
+# Set it with:  wrangler secret put ADMIN_KEY
