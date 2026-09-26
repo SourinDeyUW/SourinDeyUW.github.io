@@ -45,7 +45,7 @@
                         <div>
                             <h1 class="mb-0">
                                 Sourin
-                                <span class="text-primary">Dey</span>
+                                Dey
                             </h1>
                             <div class="subheading mb-3">
                                 Columbia, South Carolina · 
@@ -105,13 +105,26 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">PhD Research</h3>
                             <div class="subheading mb-3">Graduate Research Assistant</div>
+               <div class="research-item">
+                 <div class="research-text">
 			   <li>uFlowCSP: single-step generative model for crystal structure prediction. Discovering a new material starts with predicting how its atoms pack together, and the generative models that do this well are slow: every candidate structure costs hundreds to thousands of sequential network calls, so screening a chemical space burns hours of GPU time. I built a model that produces a complete crystal in one network evaluation by learning the average velocity of the generative trajectory instead of the instantaneous one. A screening run of ten thousand candidates drops from over an hour to under a minute, with accuracy that matches or beats the multi-step models it replaces. The hard part was conditioning: a Transformer over atoms with chemistry-aware ordering and composition features, plus a symmetry signal used only during training, so the deployed model needs nothing but a chemical composition to run. </li>
                <img src="images/Machine learning pipeline for crystal generation.png" alt="Machine learning pipeline for crystal generation" class="img-fluid mt-3 mb-3" style="max-width: 680px; width: 100%; height: auto; display: block; margin: 0 auto;" />
-               <br>
+                 </div>
+                   <img src="images/anim/uflowcsp.gif" alt="Animation: uFlowCSP turns random noise into a crystal structure in one step" class="research-anim" loading="lazy" />
+               </div>
+               <div class="research-item">
+                 <div class="research-text">
                <li>Polyhedron topology based mapping algorithm for polymorphic crystal structures - I developed polyhedron connectivity based graph topology to cluster materials across diverse space groups, improving identification of structural similarities beyond symmetry-based methods. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
                <img src="images/overleaf_figure1.png" alt="Polyhedron topology based mapping visualization" class="img-fluid mt-3 mb-3" style="max-width: 520px; width: 100%; height: auto; display: block; margin: 0 auto;" />
-               <br>
+                 </div>
+                   <img src="images/anim/polyhedral_topology.gif" alt="Animation: polymorphs regrouped from space groups into polyhedral-topology clusters" class="research-anim" loading="lazy" />
+               </div>
+               <div class="research-item">
+                 <div class="research-text">
 			   <li>Developed a variant of Atomistic Line Graph Neural Network (ALIGNN) model by Δ-learning electronic structure of crystals to predict HSE eigenvalues, a key opto-electronic property. By leveraging inexpensive PBE calculations and orbital projections, I could build highly accurate ML model as surrogate for costly DFT calculation.</li>
+                 </div>
+                   <img src="images/anim/delta_learning.gif" alt="Animation: Delta-learning corrects PBE band gaps toward HSE values" class="research-anim" loading="lazy" />
+               </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2021 - Present</span></div>
                     </div>
@@ -121,7 +134,12 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">MS Research</h3>
                             <div class="subheading mb-3">Graduate Research Assistant</div>
-                            <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. The automated system is generalized and can be deployed to manufacture other materials.</p>
+                            <div class="research-item">
+                                <div class="research-text">
+                                <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. The automated system is generalized and can be deployed to manufacture other materials.</p>
+                                </div>
+                                <img src="images/anim/active_learning_lig.gif" alt="Animation: Bayesian-optimization active learning finds the best laser settings for graphene" class="research-anim" loading="lazy" />
+                            </div>
                             
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">August 2019 - July 2021</span></div>

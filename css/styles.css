@@ -10193,3 +10193,40 @@ p.lead {
   h1, .h1 { font-size: 2rem; }
   h2, .h2 { font-size: 1.5rem; }
 }
+
+/* Research items: text on the left, small animation on the right */
+section.resume-section {
+  max-width: 90rem;
+}
+
+.research-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.research-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.research-anim {
+  flex: 0 0 360px;
+  width: 360px;
+  height: auto;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+@media (max-width: 991.98px) {
+  .research-item {
+    flex-direction: column;
+  }
+  .research-anim {
+    width: 100%;
+    max-width: 420px;
+    flex-basis: auto;
+    align-self: center;
+  }
+}
