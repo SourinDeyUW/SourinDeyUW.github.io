@@ -10139,3 +10139,57 @@ h1, h2, h3, h4, h5, h6,
 #awards ul li strong {
   color: #1a1a1a; /* Dark titles */
 }
+/* Professional typography: one clean sans-serif, sentence-case headings, restrained sizes */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.subheading {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2, .h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+h3, .h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.subheading {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #555;
+}
+
+p.lead {
+  font-size: 1.1rem;
+}
+
+.navbar-brand {
+  font-weight: 600;
+}
+
+.navbar .nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+@media (max-width: 767.98px) {
+  h1, .h1 { font-size: 2rem; }
+  h2, .h2 { font-size: 1.5rem; }
+}
