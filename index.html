@@ -16,32 +16,30 @@
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">Sourin Dey</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Research">Research Experience</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Publications</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#etx">Extracurriculars</a></li>
-                        <!-- <li class="nav-item"><a class="nav-link" href="personal.html">Personal</a></li> -->
-                    </ul>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="index.html">
+                <span class="d-block d-lg-none">Sourin Dey</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="images/dp.jpeg" alt="Sourin Dey" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="extracurriculars.html">Extracurriculars</a></li>
+                </ul>
             </div>
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
-            <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <div class="d-flex flex-column flex-md-row align-items-center align-items-md-start mb-4" style="gap: 2rem;">
-                        <img src="images/dp.jpeg" alt="Sourin Dey" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 4px solid #e9ecef; flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
+                        <img src="images/dp.jpeg" alt="Sourin Dey" class="d-lg-none" style="width: 160px; height: 160px; object-fit: cover; border-radius: 50%; border: 4px solid #e9ecef; flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.12);" />
                         <div>
                             <h1 class="mb-0">
                                 Sourin
@@ -54,273 +52,38 @@
                             <p class="lead mb-0">I am doing PhD in Computer Science at the University of South Carolina with Deep Learning and Data Science specialization</p>
                         </div>
                     </div>
-                    
-                    <div class="mb-5">
-                        <div class="subheading mb-3">Internship Experience</div>
-
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Data Science Intern</h3>
-                                <div class="subheading mb-2" style="font-size: 0.95rem;">The Dow Chemical Company</div>
-                                <p>Designed an AI-enabled product selector that works across multiple data modalities. I carried the project end to end, from reading source data out of SharePoint to deploying the application for internal use. I also built an automated data ingestion pipeline so the underlying data refreshes on its own and the selector stays current without manual updates.</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">Summer 2026</span></div>
-                        </div>
-
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Data Science Intern</h3>
-                                <div class="subheading mb-2" style="font-size: 0.95rem;">Hexagon Manufacturing Intelligence</div>
-                                <p>Graph Retrieval-Augmented Generation (Graph-RAG) pipeline using Open Source and Azure Models: I built a Q/A system to process and query 20 years of software manuals. Using LangChain framework, I converted document knowledge into a neo4j-based graph database to retrieve information that is contextually rich and useful enough to assist Applications Engineers. Delivered scalable knowledge access – Enabled engineers to efficiently search and extract insights of multi-fold difficulties (temporal, vague, reasoning) from extensive technical documentation.</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">Summer 2025</span></div>
-                        </div>
-
-                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
-                            <div class="flex-grow-1">
-                                <h3 class="mb-0">Data Science Intern</h3>
-                                <div class="subheading mb-2" style="font-size: 0.95rem;">The Dow Chemical Company</div>
-                                <p>Developed a Graph Neural Network (GNN) framework – Built a heterogeneous network graph for product recommendation using node classification. I ensured effective information flow in non-homogeneous graphs to improve recommendation accuracy. Researched Variational Autoencoder (VAE) applications – I explored generative modeling for novel product formulation based on graph structures. I also identified how large, dense graphs bias the latent space and hinder stable VAE training.</p>
-                            </div>
-                            <div class="flex-shrink-0"><span class="text-primary">Summer 2024</span></div>
-                        </div>
-                    </div>
                     <div class="social-icons">
                         <a class="social-icon" href="./Sourin-Dey-Resume2026.pdf">CV </a>
                         <a class="social-icon" href="https://www.linkedin.com/in/sourin-dey-644496199/"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/SourinDeyUW"><i class="fab fa-github"></i></a>
                     </div>
-                
-                </div>
-                
-            </section>
-            <hr class="m-0" />
-
-	   <!-- Research-->
-            
-            <section class="resume-section" id="Research">
-		<div class="resume-section-content">
-                    <h2 class="mb-5">Research Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">PhD Research</h3>
-                            <div class="subheading mb-3">Graduate Research Assistant</div>
-               <div class="research-item">
-                 <div class="research-text">
-			   <li>uFlowCSP: single-step generative model for crystal structure prediction. Discovering a new material starts with predicting how its atoms pack together, and the generative models that do this well are slow: every candidate structure costs hundreds to thousands of sequential network calls, so screening a chemical space burns hours of GPU time. I built a model that produces a complete crystal in one network evaluation by learning the average velocity of the generative trajectory instead of the instantaneous one. A screening run of ten thousand candidates drops from over an hour to under a minute, with accuracy that matches or beats the multi-step models it replaces. The hard part was conditioning: a Transformer over atoms with chemistry-aware ordering and composition features, plus a symmetry signal used only during training, so the deployed model needs nothing but a chemical composition to run. </li>
-               <img src="images/Machine learning pipeline for crystal generation.png" alt="Machine learning pipeline for crystal generation" class="img-fluid mt-3 mb-3" style="max-width: 680px; width: 100%; height: auto; display: block; margin: 0 auto;" />
-                 </div>
-                   <img src="images/anim/uflowcsp.gif" alt="Animation: uFlowCSP turns random noise into a crystal structure in one step" class="research-anim" loading="lazy" />
-               </div>
-               <div class="research-item">
-                 <div class="research-text">
-               <li>Polyhedron topology based mapping algorithm for polymorphic crystal structures - I developed polyhedron connectivity based graph topology to cluster materials across diverse space groups, improving identification of structural similarities beyond symmetry-based methods. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
-               <img src="images/overleaf_figure1.png" alt="Polyhedron topology based mapping visualization" class="img-fluid mt-3 mb-3" style="max-width: 520px; width: 100%; height: auto; display: block; margin: 0 auto;" />
-                 </div>
-                   <img src="images/anim/polyhedral_topology.gif" alt="Animation: polymorphs regrouped from space groups into polyhedral-topology clusters" class="research-anim" loading="lazy" />
-               </div>
-               <div class="research-item">
-                 <div class="research-text">
-			   <li>Developed a variant of Atomistic Line Graph Neural Network (ALIGNN) model by Δ-learning electronic structure of crystals to predict HSE eigenvalues, a key opto-electronic property. By leveraging inexpensive PBE calculations and orbital projections, I could build highly accurate ML model as surrogate for costly DFT calculation.</li>
-                 </div>
-                   <img src="images/anim/delta_learning.gif" alt="Animation: Delta-learning corrects PBE band gaps toward HSE values" class="research-anim" loading="lazy" />
-               </div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - Present</span></div>
+                    <div class="anim-grid">
+                        <a class="anim-card" href="research.html#uflowcsp">
+                            <img src="images/anim/uflowcsp.gif" alt="Animation: uFlowCSP" />
+                            <h3>uFlowCSP</h3>
+                            <p>A generative model that predicts a crystal structure from its composition in a single network evaluation.</p>
+                        </a>
+                        <a class="anim-card" href="research.html#topology">
+                            <img src="images/anim/polyhedral_topology.gif" alt="Animation: Polyhedral topology of polymorphs" />
+                            <h3>Polyhedral topology of polymorphs</h3>
+                            <p>Grouping crystal structures by how their polyhedra connect, beyond what symmetry alone reveals.</p>
+                        </a>
+                        <a class="anim-card" href="research.html#alignn">
+                            <img src="images/anim/delta_learning.gif" alt="Animation: Δ-learning with ALIGNN" />
+                            <h3>Δ-learning with ALIGNN</h3>
+                            <p>Learning a correction on cheap PBE calculations to predict accurate HSE band gaps.</p>
+                        </a>
+                        <a class="anim-card" href="research.html#lig">
+                            <img src="images/anim/active_learning_lig.gif" alt="Animation: Active learning for graphene" />
+                            <h3>Active learning for graphene</h3>
+                            <p>Bayesian optimization that chooses the next laser experiment to make better graphene with fewer trials.</p>
+                        </a>
                     </div>
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Research Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">MS Research</h3>
-                            <div class="subheading mb-3">Graduate Research Assistant</div>
-                            <div class="research-item">
-                                <div class="research-text">
-                                <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. The automated system is generalized and can be deployed to manufacture other materials.</p>
-                                </div>
-                                <img src="images/anim/active_learning_lig.gif" alt="Animation: Bayesian-optimization active learning finds the best laser settings for graphene" class="research-anim" loading="lazy" />
-                            </div>
-                            
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - July 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Undergraduate Thesis</h3>
-                            <p>Formant-based Perceptual Space Classification is focused on detecting the Bengali vowel from
-                                continuous speech. High Accuracy by SVM RBF Kernel Classifier is gained. This will enhance the
-                                emotional state recognition research in the Bengali language.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2017 - May 2018</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-		   <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of South Carolina</h3>
-                            <div class="subheading mb-3">Doctorate - Computer Science </div>
-                            <div>Selected Courses: Data Mining & Warehousing, Computer Processing of Natural Language, 
-			    Neuromorphic Computing</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of Wyoming</h3>
-                            <div class="subheading mb-3">Master - Computer Science </div>
-                            <div>Selected Courses: Intro to AI, Deep Reinforcement Learning & Control, Randomness in Computation</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - July 2021</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Khulna University of Engineering & Technology</h3>
-                            <div class="subheading mb-3">Bachelor of Science - Electrical and Electronic Engineering </div>
-                            <div>Selected Courses: Digital Image Processing, Digital Signal Processing</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2014 - May 2018</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            
-           
-            <!-- Interests-->
-            <!--
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p></p>
-                    <p class="mb-0"></p>
-                </div>
-            </section>
-            <hr class="m-0" />-->
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Publications</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://arxiv.org/abs/2609.09799" target="_blank" rel="noopener noreferrer">uFlowCSP: Crystal Structure Prediction using Mean flow generative models</a></strong><br>
-                            <em>arXiv preprint arXiv:2609.09799, 2026</em><br>
-                            Authors: S Dey, D Das Gupta, L Wei, SS Omee, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://arxiv.org/abs/2509.08418" target="_blank" rel="noopener noreferrer">Facet: highly efficient E (3)-equivariant networks for interatomic potentials</a></strong><br>
-                            <em>arXiv preprint arXiv:2509.08418, 2025</em><br>
-                            Authors: N Miklaucic, L Wei, R Dong, N Fu, SS Omee, Q Li, S Dey, V Fung, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://pubs.acs.org/doi/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Data-Driven Topological Analysis of Polymorphic Crystal Structures</a></strong><br>
-                            <em>The Journal of Physical Chemistry C, 2025</em><br>
-                            Authors: S Dey, N Miklaucic, SS Omee, R Dong, L Wei, Q Li, N Fu, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202510792" target="_blank" rel="noopener noreferrer">Polymorphism crystal structure prediction with adaptive space group diversity control</a></strong><br>
-                            <em>Advanced Science, 2025</em><br>
-                            Authors: SS Omee, L Wei, S Dey, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://arxiv.org/abs/2506.11332" target="_blank" rel="noopener noreferrer">Polymorphism Crystal Structure Prediction with Adaptive Space Group Diversity Control</a></strong><br>
-                            <em>arXiv e-prints, arXiv: 2506.11332, 2025</em><br>
-                            Authors: S Sadeed Omee, L Wei, S Dey, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://doi.org/10.1016/j.patter.2022.100491" target="_blank" rel="noopener noreferrer">Scalable deeper graph neural networks for high-performance materials property prediction</a></strong><br>
-                            <em>Patterns 3 (5), 2022</em><br>
-                            Authors: SS Omee, SY Louis, N Fu, L Wei, S Dey, R Dong, Q Li, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://pubs.acs.org/doi/10.1021/acsami.2c05812" target="_blank" rel="noopener noreferrer">DeepXRD, a deep learning model for predicting XRD spectrum from material composition</a></strong><br>
-                            <em>ACS Applied Materials & Interfaces 14 (35), 2022</em><br>
-                            Authors: R Dong, Y Zhao, Y Song, N Fu, SS Omee, S Dey, Q Li, L Wei, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://ebooks.iospress.nl/volumearticle/60357" target="_blank" rel="noopener noreferrer">Optimizing laser-induced graphene production</a></strong><br>
-                            <em>PAIS 2022, 2022</em><br>
-                            Authors: L Kotthoff, S Dey, J Heil, V Jain, T Muller, A Tyrrell, H Wahab, P Johnson
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://doi.org/10.1016/j.patter.2022.100491" target="_blank" rel="noopener noreferrer">Scalable deeper graph neural networks for high-performance materials property prediction. Patterns 3, 100491</a></strong><br>
-                            <em>2022</em><br>
-                            Authors: SS Omee, SY Louis, N Fu, L Wei, S Dey, R Dong, Q Li, J Hu
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://www.proquest.com/openview/904afa1da5f0ea8cd07a613034fb078c/1?cbl=18750&amp;diss=y&amp;pq-origsite=gscholar" target="_blank" rel="noopener noreferrer">Investigation of Exploration-Exploitation Trade-off of Bayesian Optimization to Optimize the Fully Automated Laser-Induced Graphene Process</a></strong><br>
-                            <em>2021</em><br>
-                            Authors: S Dey
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://ieeexplore.ieee.org/document/8631948/" target="_blank" rel="noopener noreferrer">Formant based bangla vowel perceptual space classification using support vector machine and K-nearest neighbor method</a></strong><br>
-                            <em>2018 21st International Conference of Computer and Information Technology, 2018</em><br>
-                            Authors: S Dey, MA Alam
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-file-alt text-primary"></i></span>
-                            <strong><a href="https://ieeexplore.ieee.org/document/8275205/" target="_blank" rel="noopener noreferrer">SAR reduction of bio-tissue in cellular communication</a></strong><br>
-                            <em>2017 3rd International Conference on Electrical Information and Communication Technology, 2017</em><br>
-                            Authors: S Dey, S Dey, AS Ahmed, MN Mollah
-                        </li>
-			    
-                    </ul>
                 </div>
             </section>
         </div>
-        <hr class="m-0" />
-            <!-- Skills-->
-        <section class="etc-section" id="etx">
-            <div class="etc-section-content">
-                <h2 class="mb-5">Extracurriculars</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        
-                        <p>
-                            I have interests in wildlife photography. During my master's days, I explored rural Wyoming and countrysides of the colorful Colorado.
-                            Have a look of my stills of the places <a href="https://www.flickr.com/photos/191915104@N02/">Wyoming Days!!</a>
-                        </p>
-                        <p>Instructor, Dept. of Chemistry & Biochemistry, University of South Carolina. Worked as an instructor for Python Programming Summer Camp Workshop.</p>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </section>
-        <hr class="m-0" />
-
-
-
-
-
-
-
-
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- Visitor logging (Cloudflare Worker) -->
-        <script>
-          fetch("https://ip-logger.sourin.workers.dev/?p=home",
-                { method: "POST", keepalive: true }).catch(function () {});
-        </script>
     </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Sourin Dey · Research</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand" href="index.html">
+                <span class="d-block d-lg-none">Sourin Dey</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="images/dp.jpeg" alt="Sourin Dey" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="research.html">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
+                    <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="extracurriculars.html">Extracurriculars</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <section class="resume-section" id="Research">
+		<div class="resume-section-content">
+                    <h2 class="mb-5">Research</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">PhD Research</h3>
+                            <div class="subheading mb-3">Graduate Research Assistant</div>
+               <div class="research-item" id="uflowcsp">
+                 <div class="research-text">
+			   <li>uFlowCSP: single-step generative model for crystal structure prediction. Discovering a new material starts with predicting how its atoms pack together, and the generative models that do this well are slow: every candidate structure costs hundreds to thousands of sequential network calls, so screening a chemical space burns hours of GPU time. I built a model that produces a complete crystal in one network evaluation by learning the average velocity of the generative trajectory instead of the instantaneous one. A screening run of ten thousand candidates drops from over an hour to under a minute, with accuracy that matches or beats the multi-step models it replaces. The hard part was conditioning: a Transformer over atoms with chemistry-aware ordering and composition features, plus a symmetry signal used only during training, so the deployed model needs nothing but a chemical composition to run. </li>
+               <img src="images/Machine learning pipeline for crystal generation.png" alt="Machine learning pipeline for crystal generation" class="img-fluid mt-3 mb-3" style="max-width: 680px; width: 100%; height: auto; display: block; margin: 0 auto;" />
+                 </div>
+                   <img src="images/anim/uflowcsp.gif" alt="Animation: uFlowCSP turns random noise into a crystal structure in one step" class="research-anim" loading="lazy" />
+               </div>
+               <div class="research-item" id="topology">
+                 <div class="research-text">
+               <li>Polyhedron topology based mapping algorithm for polymorphic crystal structures - I developed polyhedron connectivity based graph topology to cluster materials across diverse space groups, improving identification of structural similarities beyond symmetry-based methods. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
+               <img src="images/overleaf_figure1.png" alt="Polyhedron topology based mapping visualization" class="img-fluid mt-3 mb-3" style="max-width: 520px; width: 100%; height: auto; display: block; margin: 0 auto;" />
+                 </div>
+                   <img src="images/anim/polyhedral_topology.gif" alt="Animation: polymorphs regrouped from space groups into polyhedral-topology clusters" class="research-anim" loading="lazy" />
+               </div>
+               <div class="research-item" id="alignn">
+                 <div class="research-text">
+			   <li>Developed a variant of Atomistic Line Graph Neural Network (ALIGNN) model by Δ-learning electronic structure of crystals to predict HSE eigenvalues, a key opto-electronic property. By leveraging inexpensive PBE calculations and orbital projections, I could build highly accurate ML model as surrogate for costly DFT calculation.</li>
+                 </div>
+                   <img src="images/anim/delta_learning.gif" alt="Animation: Delta-learning corrects PBE band gaps toward HSE values" class="research-anim" loading="lazy" />
+               </div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2021 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">MS Research</h3>
+                            <div class="subheading mb-3">Graduate Research Assistant</div>
+                            <div class="research-item" id="lig">
+                                <div class="research-text">
+                                <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. The automated system is generalized and can be deployed to manufacture other materials.</p>
+                                </div>
+                                <img src="images/anim/active_learning_lig.gif" alt="Animation: Bayesian-optimization active learning finds the best laser settings for graphene" class="research-anim" loading="lazy" />
+                            </div>
+                            
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - July 2021</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Undergraduate Thesis</h3>
+                            <p>Formant-based Perceptual Space Classification is focused on detecting the Bengali vowel from
+                                continuous speech. High Accuracy by SVM RBF Kernel Classifier is gained. This will enhance the
+                                emotional state recognition research in the Bengali language.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2017 - May 2018</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
