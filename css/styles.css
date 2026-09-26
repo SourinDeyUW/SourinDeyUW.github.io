@@ -10300,3 +10300,8 @@ section.resume-section {
   object-fit: cover;
   object-position: center 30%;
 }
+
+/* Home bio: same width as the animation grid */
+#about p.lead {
+  max-width: 62rem;
+}
