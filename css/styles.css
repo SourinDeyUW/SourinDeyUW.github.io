@@ -10313,7 +10313,7 @@ section.resume-section {
 
 #sideNav .research-cloud {
   width: 100%;
-  padding: 1.1rem 0.75rem 0;
+  padding: 1.9rem 0.75rem 0;
   margin-bottom: auto;
 }
 
@@ -10393,6 +10393,9 @@ section.resume-section {
   #sideNav:has(.research-cloud) .navbar-nav .nav-item .nav-link {
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
+  }
+  #sideNav .research-cloud {
+    padding-top: 1.1rem;
   }
 }
 
