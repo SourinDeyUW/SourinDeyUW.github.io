@@ -10305,3 +10305,97 @@ section.resume-section {
 #about p.lead {
   max-width: 62rem;
 }
+
+/* Home sidebar: research-interest word cloud */
+#sideNav .navbar-collapse:has(+ .research-cloud) {
+  margin-bottom: 0;
+}
+
+#sideNav .research-cloud {
+  width: 100%;
+  padding: 1.1rem 0.75rem 0;
+  margin-bottom: auto;
+}
+
+.research-cloud-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.research-cloud-label::before,
+.research-cloud-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.research-cloud-words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.15rem 0.5rem;
+  line-height: 1.25;
+}
+
+.research-cloud-words a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s, transform 0.15s;
+  animation: cloud-in 0.5s ease-out both;
+}
+
+.research-cloud-words a:hover,
+.research-cloud-words a:focus {
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.research-cloud-words .w-xl { font-size: 1.15rem; font-weight: 700; color: #fff; }
+.research-cloud-words .w-lg { font-size: 1rem;    font-weight: 600; color: rgba(255, 255, 255, 0.92); }
+.research-cloud-words .w-md { font-size: 0.85rem; font-weight: 500; }
+.research-cloud-words .w-sm { font-size: 0.76rem; font-weight: 500; color: rgba(255, 255, 255, 0.62); }
+.research-cloud-words .w-xs { font-size: 0.7rem;  font-weight: 400; color: rgba(255, 255, 255, 0.5); }
+
+.research-cloud-words .accent-1 { color: #8fd3c8; }
+.research-cloud-words .accent-2 { color: #a9c8f5; }
+.research-cloud-words .accent-3 { color: #f2c98a; }
+
+.research-cloud-words a:nth-child(3n+1) { animation-delay: 0.05s; }
+.research-cloud-words a:nth-child(3n+2) { animation-delay: 0.15s; }
+.research-cloud-words a:nth-child(3n)   { animation-delay: 0.25s; }
+
+@keyframes cloud-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-cloud-words a { animation: none; transition: none; }
+}
+
+/* Shorter screens: compact the home sidebar so photo + nav + cloud fit */
+@media (min-width: 992px) and (max-height: 860px) {
+  #sideNav:has(.research-cloud) .navbar-brand .img-profile {
+    width: 8rem;
+    height: 8rem;
+  }
+  #sideNav:has(.research-cloud) .navbar-nav .nav-item .nav-link {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+}
+
+@media (max-height: 700px) {
+  #sideNav .research-cloud { display: none !important; }
+}
