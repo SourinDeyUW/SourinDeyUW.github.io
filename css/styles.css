@@ -10402,3 +10402,21 @@ section.resume-section {
 @media (max-height: 700px) {
   #sideNav .research-cloud { display: none !important; }
 }
+
+/* Mobile/tablet copy of the word cloud (sidebar copy is hidden below lg) */
+.research-cloud-mobile {
+  background: #2c3e50;
+  border-radius: 12px;
+  padding: 1.1rem 1rem 1.25rem;
+  margin-top: 2rem;
+}
+
+.research-cloud-mobile .research-cloud-words {
+  gap: 0.35rem 0.75rem;
+}
+
+.research-cloud-mobile .research-cloud-words .w-xl { font-size: 1.3rem; }
+.research-cloud-mobile .research-cloud-words .w-lg { font-size: 1.1rem; }
+.research-cloud-mobile .research-cloud-words .w-md { font-size: 0.95rem; }
+.research-cloud-mobile .research-cloud-words .w-sm { font-size: 0.85rem; }
+.research-cloud-mobile .research-cloud-words .w-xs { font-size: 0.8rem; }
