@@ -38,28 +38,29 @@
         <div class="container-fluid p-0">
             <section class="resume-section" id="Research">
 		<div class="resume-section-content">
-                    <h2 class="mb-5">Research</h2>
+                    <h2 class="mb-3">Research</h2>
+                    <p class="mb-5" style="max-width: 62rem;">My research follows one pattern: take an expensive step in materials discovery or manufacturing, build a model that puts physical structure into the learning problem, and show it beats the existing approach on speed, cost or accuracy. The same approach carries into my <a href="internships.html">industry work</a>.</p>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">PhD Research</h3>
                             <div class="subheading mb-3">Graduate Research Assistant</div>
                <div class="research-item" id="uflowcsp">
                  <div class="research-text">
-			   <li>uFlowCSP: single-step generative model for crystal structure prediction. Discovering a new material starts with predicting how its atoms pack together, and the generative models that do this well are slow: every candidate structure costs hundreds to thousands of sequential network calls, so screening a chemical space burns hours of GPU time. I built a model that produces a complete crystal in one network evaluation by learning the average velocity of the generative trajectory instead of the instantaneous one. A screening run of ten thousand candidates drops from over an hour to under a minute, with accuracy that matches or beats the multi-step models it replaces. The hard part was conditioning: a Transformer over atoms with chemistry-aware ordering and composition features, plus a symmetry signal used only during training, so the deployed model needs nothing but a chemical composition to run. </li>
+			   <li>uFlowCSP: single-step generative model for crystal structure prediction. Discovering a new material starts with predicting how its atoms pack together, and the generative models that do this well are slow: every candidate structure costs hundreds to thousands of sequential network calls, so screening a chemical space burns hours of GPU time. I built a model that produces a complete crystal in one network evaluation by learning the average velocity of the generative trajectory instead of the instantaneous one. On the MP-20 benchmark, one step matches CrystalFlow's match rate (78.4% vs 78.3%) with 100&times; fewer network evaluations, and five steps reach 83.6%, ahead of CrystalFlow (78.3%, 2,000 evaluations) and DiffCSP (77.9%, about 20,000 evaluations). Generating 10,000 structures takes 0.4&ndash;1.3 minutes, against 6.5 minutes for CrystalFlow and 76 minutes for DiffCSP. The hard part was conditioning: a Transformer over atoms with chemistry-aware ordering and composition features, plus a symmetry signal used only during training, so the deployed model needs nothing but a chemical composition to run. <a href="https://arxiv.org/abs/2609.09799" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
                <img src="images/Machine learning pipeline for crystal generation.png" alt="Machine learning pipeline for crystal generation" class="img-fluid mt-3 mb-3" style="max-width: 680px; width: 100%; height: auto; display: block; margin: 0 auto;" />
                  </div>
                    <img src="images/anim/uflowcsp.gif" alt="Animation: uFlowCSP turns random noise into a crystal structure in one step" class="research-anim" loading="lazy" />
                </div>
                <div class="research-item" id="topology">
                  <div class="research-text">
-               <li>Polyhedron topology based mapping algorithm for polymorphic crystal structures - I developed polyhedron connectivity based graph topology to cluster materials across diverse space groups, improving identification of structural similarities beyond symmetry-based methods. <a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
+               <li>Polyhedron topology based mapping algorithm for polymorphic crystal structures - I developed polyhedron connectivity based graph topology to cluster materials across diverse space groups, improving identification of structural similarities beyond symmetry-based methods. <!-- TODO (Sourin): add the concrete evidence from the paper: how many structures/polymorphs, what the topology clusters found that space-group classification missed, any validation numbers. --><a href="https://pubs.acs.org/doi/full/10.1021/acs.jpcc.5c06442" target="_blank" rel="noopener noreferrer">Paper link</a>.</li>
                <img src="images/overleaf_figure1.png" alt="Polyhedron topology based mapping visualization" class="img-fluid mt-3 mb-3" style="max-width: 520px; width: 100%; height: auto; display: block; margin: 0 auto;" />
                  </div>
                    <img src="images/anim/polyhedral_topology.gif" alt="Animation: polymorphs regrouped from space groups into polyhedral-topology clusters" class="research-anim" loading="lazy" />
                </div>
                <div class="research-item" id="alignn">
                  <div class="research-text">
-			   <li>Developed a variant of Atomistic Line Graph Neural Network (ALIGNN) model by Δ-learning electronic structure of crystals to predict HSE eigenvalues, a key opto-electronic property. By leveraging inexpensive PBE calculations and orbital projections, I could build highly accurate ML model as surrogate for costly DFT calculation.</li>
+			   <li>Developed a variant of Atomistic Line Graph Neural Network (ALIGNN) model by Δ-learning electronic structure of crystals to predict HSE eigenvalues, a key opto-electronic property. By leveraging inexpensive PBE calculations and orbital projections, I could build highly accurate ML model as surrogate for costly DFT calculation. <!-- TODO (Sourin): add the headline number (e.g. MAE of the Δ-learned HSE eigenvalues vs a model trained on PBE alone or vs the original ALIGNN), the dataset size, and the compute saved vs HSE DFT. --></li>
                  </div>
                    <img src="images/anim/delta_learning.gif" alt="Animation: Delta-learning corrects PBE band gaps toward HSE values" class="research-anim" loading="lazy" />
                </div>
@@ -72,7 +73,9 @@
                             <div class="subheading mb-3">Graduate Research Assistant</div>
                             <div class="research-item" id="lig">
                                 <div class="research-text">
-                                <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. The automated system is generalized and can be deployed to manufacture other materials.</p>
+                                <p>I automated the AI powered Laser-Induced Graphene Process(LIG) manufacturing using Bayesian Optimization. This is a small-data problem: each experiment is a physical run, so the system uses Bayesian model-based optimization to improve outcomes from little initial data. It improved on previous results in graphene quality across several precursor materials, and its robustness was tested across experimental conditions. The automated system is generalized and can be deployed to manufacture other materials. <a href="https://ebooks.iospress.nl/volumearticle/60357" target="_blank" rel="noopener noreferrer">Paper link</a>.</p>
+                                <!-- TODO (Sourin): add the headline number from the PAIS 2022 paper or your thesis: quality gain over the previous best / manual settings, and how many experiments it took. -->
+
                                 </div>
                                 <img src="images/anim/active_learning_lig.gif" alt="Animation: Bayesian-optimization active learning finds the best laser settings for graphene" class="research-anim" loading="lazy" />
                             </div>
