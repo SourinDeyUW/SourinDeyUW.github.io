@@ -43,19 +43,20 @@
                             <div class="flex-grow-1">
                                 <h3 class="mb-0">Data Science Intern</h3>
                                 <div class="subheading mb-2" style="font-size: 0.95rem;">The Dow Chemical Company</div>
-                                <p><strong>AI-enabled product selector, built and deployed end to end for internal use.</strong></p>
+                                <p><strong>An AI-enabled product selector that puts product, training and technical knowledge in one place for customer-facing sales representatives and new team members, built and deployed end to end for internal use.</strong></p>
                                 <!--
-                                    TODO (Sourin): the feedback says this entry undersells the work. Add what only you know:
-                                      - Who uses it (team / role / approximate number of users) and what they did before it existed.
-                                      - Scale: number of products, documents or records; which data modalities (text, tables, PDFs, images?).
+                                    TODO (Sourin): still missing for this entry:
+                                      - Approximate number of users, and what they did before it existed.
+                                      - Scale: number of products, decks, videos or records.
                                       - Hard problems you solved (e.g. reconciling modalities, retrieval quality, SharePoint access/permissions).
-                                      - Measurable outcome (time saved per selection, accuracy vs the old process, adoption).
+                                      - Measurable outcome (time saved per lookup, accuracy vs the old process, adoption, onboarding time).
                                     Check with Dow what is OK to publish before adding numbers.
                                 -->
                                 <ul class="mb-0">
-                                    <li><strong>Model:</strong> a selector that works across multiple data modalities.</li>
+                                    <li><strong>Users:</strong> customer-facing sales representatives who need product details in front of a customer, and new employees who use it for training and technical onboarding.</li>
+                                    <li><strong>Model:</strong> a selector that works across multiple data modalities, including PowerPoint decks and video, so an answer can come from wherever the knowledge actually lives.</li>
                                     <li><strong>Data pipeline:</strong> read source data out of SharePoint and built an automated ingestion pipeline, so the data refreshes on its own and the selector stays current without manual updates.</li>
-                                    <li><strong>Deployment:</strong> carried the project from raw source data to a deployed application used internally.</li>
+                                    <li><strong>Deployment:</strong> carried the project from raw source data to a deployed application, used internally by sales representatives and new hires.</li>
                                 </ul>
                             </div>
                             <div class="flex-shrink-0"><span class="text-primary">Summer 2026</span></div>
@@ -65,12 +66,13 @@
                             <div class="flex-grow-1">
                                 <h3 class="mb-0">Data Science Intern</h3>
                                 <div class="subheading mb-2" style="font-size: 0.95rem;">Hexagon Manufacturing Intelligence</div>
-                                <p><strong>Graph-RAG question-answering system over 20 years of software manuals, built to assist Applications Engineers.</strong></p>
+                                <p><strong>A graph-RAG question-answering system over 20 years of software manuals, built for Applications Engineers.</strong></p>
                                 <!--
                                     TODO (Sourin): add how it was evaluated and what it improved on (e.g. vs plain vector-RAG or keyword search),
                                     plus number of documents/pages, and whether Applications Engineers adopted it.
                                 -->
                                 <ul class="mb-0">
+                                    <li><strong>Users:</strong> Applications Engineers, who need reliable answers from two decades of technical documentation.</li>
                                     <li><strong>Approach:</strong> used LangChain to convert document knowledge into a Neo4j graph database, with open-source and Azure models, so retrieval returns context-rich results.</li>
                                     <li><strong>Hard cases:</strong> supports temporal, vague and reasoning questions over extensive technical documentation.</li>
                                     <li><strong>Impact:</strong> gives engineers scalable search across the full manual archive.</li>
